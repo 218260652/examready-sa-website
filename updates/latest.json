@@ -1,0 +1,10 @@
+{
+  "appName": "ExamReady SA",
+  "packageName": "za.co.examready.prototype",
+  "versionName": "1.2.1",
+  "versionCode": 9,
+  "apkPath": "downloads/ExamReadySA-v1.2.1.apk",
+  "sizeBytes": 11334258,
+  "sha256": "f2f7de0c8cdc0401c134a5e75b7b120b1fde076fbb47eec9da2817e6741fe538",
+  "releaseNotes": "Optional WhatsApp study group button on Home and Resources."
+}
