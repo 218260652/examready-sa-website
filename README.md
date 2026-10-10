@@ -33,12 +33,17 @@ For each new version:
 
 The original ChatGPT Sites URL and app update checker are separate; migrating the existing Android update-check URL requires an Android app code change and a new APK. This site intentionally has no promotional content, analytics, external scripts or optional study-group links.
 
-## v1.2.2 migration status
+## v1.2.2 release status
 
-The Android v1.2.2 source now points its update checker and update button to this GitHub Pages download website. The new debug APK built and passed emulator testing.
+Public v1.2.2 (version code 10) is now live on GitHub Pages after the release workflow checked its SHA-256 checksum, Android signing certificate, package name and version:
 
-**Hold public release:** On 10 October 2026, a certificate comparison confirmed that the installed v1.2.1 testing APK and newly built v1.2.2 testing APK have different signing certificates. Android will refuse to install the latter over the former. Uninstalling the old APK can erase locally saved learner progress.
+- APK: `downloads/ExamReadySA-v1.2.2.apk`
+- File SHA-256: `e5a846ae56df82b7ed5bd4ce12e593c81be6c39cf49377ada32126563469c226`
+- Release signing certificate SHA-256: `dd4c342fcfa66ac2d9b7b37c1a4cd55d4c998be78dbe2479489b031d6fe38dc2`
+- Latest metadata: `updates/latest.json` and `updates/android.json` report version 1.2.2, minimum 1 (optional updates).
 
-The public download and update manifest must stay at v1.2.1 until the signing and migration plan is settled. No automated v1.2.2 publishing workflow is enabled. Do not raise latestVersionCode or minimumSupportedVersionCode prematurely.
+**Migration warning:** Old v1.2.1 and earlier debug-signed APKs cannot upgrade in place to v1.2.2 due to the different signing certificate. Uninstalling these older versions may erase quiz progress. The owner approved the one-time reinstall for migration. Future updates must use the same production release key to support in-place updates.
 
-Use a securely stored permanent signing key for future releases, and test upgrading between two consecutive production-signed builds before promising update-in-place support.
+The production signing workflow is in the private Android repo at `.github/workflows/signed-release.yml`. Configuring its two GitHub Actions signing secrets and running a signed build on GitHub are **separate pending tasks** and must not be confused with this independently verified public v1.2.2 APK. Never add private key or password to a commit.
+
+The old ChatGPT Sites update URL used by pre-v1.2.2 APKs cannot be remotely redirected; only installations of v1.2.2 or higher query the new GitHub Pages policy.
