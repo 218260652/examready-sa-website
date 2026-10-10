@@ -1,10 +1,10 @@
 {
   "appName": "ExamReady SA",
   "packageName": "za.co.examready.prototype",
-  "versionName": "1.2.2",
-  "versionCode": 10,
-  "apkPath": "downloads/ExamReadySA-v1.2.2.apk",
+  "versionName": "1.2.3",
+  "versionCode": 11,
+  "apkPath": "downloads/ExamReadySA-v1.2.3.apk",
   "sizeBytes": 9597905,
-  "sha256": "e5a846ae56df82b7ed5bd4ce12e593c81be6c39cf49377ada32126563469c226",
-  "releaseNotes": "Permanent release signing and GitHub Pages update checks. First migration from old debug versions requires reinstall."
+  "sha256": "eef26af0d2591c8051bba94658b158e55ab295b40ccb7e499a4906739cd46200",
+  "releaseNotes": "Non-personalized, G-rated advertisements for eligible teens 13\u201317 and adults, with updated privacy controls."
 }

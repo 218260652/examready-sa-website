@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "packageName": "za.co.examready.prototype",
-  "latestVersionCode": 10,
-  "latestVersionName": "1.2.2",
+  "latestVersionCode": 11,
+  "latestVersionName": "1.2.3",
   "minimumSupportedVersionCode": 1,
-  "message": "ExamReady SA v1.2.2 is available. This is a one-time signing migration from earlier test builds; uninstalling your old app can remove saved progress. After migration, future releases can update normally."
+  "message": "ExamReady SA v1.2.3 is available. Teen learners aged 13\u201317 can see privacy-protected, non-personalized G-rated banners where approved; adults can use optional advertising. Version 1.2.2 can update in place."
 }
