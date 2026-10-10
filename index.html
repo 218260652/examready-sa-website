@@ -72,7 +72,7 @@
       var response=await fetch('./updates/latest.json?nocache='+Date.now(),{cache:'no-store'});
       if(!response.ok)throw new Error('Release information unavailable');
       var release=await response.json();
-      if(!release || !/^\\d+\\.\\d+\\.\\d+$/.test(release.versionName)||!/^downloads\\/ExamReadySA-[A-Za-z0-9._-]+\\.apk$/.test(release.apkPath))throw new Error('Invalid release information');
+      if(!release || !/^\d+\.\d+\.\d+$/.test(release.versionName)||!/^downloads\/ExamReadySA-[A-Za-z0-9._-]+\.apk$/.test(release.apkPath))throw new Error('Invalid release information');
       version.textContent='Version '+release.versionName;
       if(Number.isFinite(release.sizeBytes)&&release.sizeBytes>0)size.textContent=(release.sizeBytes/1048576).toFixed(1)+' MB APK';
       var url=new URL(release.apkPath,window.location.href);
