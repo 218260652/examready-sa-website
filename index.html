@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080b22">
+  <meta name="description" content="ExamReady SA — free Android study practice for South African learners in Grades 10 to 12. Explore eight subjects, illustrated questions and an optional WhatsApp study community.">
+  <meta property="og:title" content="ExamReady SA — Study smarter. Aim higher.">
+  <meta property="og:description" content="4,840 practice questions across eight subjects for Grades 10–12. Created for South African learners.">
+  <meta property="og:type" content="website">
+  <title>ExamReady SA | Study smarter. Aim higher.</title>
+  <style>
+    :root{color-scheme:dark;--bg:#080b22;--card:#111a3c;--line:rgba(159,186,255,.17);--text:#f2f7ff;--muted:#b5c5e9;--cyan:#58e9ff;--violet:#af82ff;--green:#4ae6b1;--radius:23px}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:95px}
+    body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;line-height:1.55;overflow-x:hidden}
+    a{color:inherit;text-decoration:none}
+    button{font:inherit}
+    a:focus-visible,button:focus-visible{outline:3px solid var(--cyan);outline-offset:4px}
+    .backdrop{position:fixed;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(ellipse 50% 38% at 78% 10%,rgba(100,66,210,.27),transparent 72%),radial-gradient(ellipse 55% 46% at 6% 50%,rgba(0,193,255,.11),transparent 75%),linear-gradient(180deg,#080b22 0%,#0d1230 61%,#080b22 100%)}
+    .wrap{width:min(1120px,calc(100% - 44px));margin-inline:auto}
+    .site-header{position:sticky;top:0;z-index:20;background:rgba(8,11,34,.85);backdrop-filter:blur(17px);border-bottom:1px solid var(--line)}
+    .header-inner{min-height:77px;display:flex;align-items:center;justify-content:space-between;gap:25px}
+    .brand{display:flex;align-items:center;gap:11px;font-weight:850;font-size:20px;letter-spacing:-.6px}
+    .mark{display:grid;place-items:center;height:43px;width:43px;border-radius:15px;background:linear-gradient(145deg,#6739c9,#193ba6);border:1px solid rgba(255,255,255,.24);box-shadow:0 6px 28px rgba(99,61,239,.31);font-size:23px}
+    nav{display:flex;align-items:center;gap:27px}
+    nav a{font-size:14px;font-weight:650;color:var(--muted);transition:color .15s}
+    nav a:hover{color:white}
+    .button{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:11px 20px;border:1px solid transparent;border-radius:15px;font-size:14px;font-weight:800;transition:transform .18s,box-shadow .18s;cursor:pointer;text-align:center}
+    .button:hover{transform:translateY(-2px)}
+    .button-primary{background:linear-gradient(110deg,#5b51f8,#8f4af6);color:#fff;box-shadow:0 12px 32px rgba(85,64,226,.25)}
+    .button-outline{border-color:rgba(165,191,255,.28);background:rgba(255,255,255,.035)}
+    .button-green{background:#24c985;color:#052a24;box-shadow:0 10px 28px rgba(32,204,133,.22)}
+    .menu-button{display:none;border:1px solid var(--line);background:rgba(255,255,255,.08);color:white;border-radius:12px;min-height:44px;min-width:44px}
+    .hero{display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:55px;padding:92px 0 100px}
+    .eyebrow{display:inline-flex;gap:9px;align-items:center;padding:8px 13px;border:1px solid rgba(88,233,255,.23);background:rgba(88,233,255,.065);border-radius:50px;color:#8cefff;font-size:12px;font-weight:850;letter-spacing:.08em;text-transform:uppercase}
+    .eyebrow .pulse{width:7px;height:7px;border-radius:50%;background:#62e6c6;box-shadow:0 0 13px #62e6c6}
+    h1,h2,h3,p{margin-top:0}
+    h1{font-size:clamp(42px,5.5vw,76px);font-weight:900;line-height:1.065;letter-spacing:-.07em;margin:24px 0 24px}
+    .shine{background:linear-gradient(90deg,#63f0ff,#bc8dff 75%);color:transparent;background-clip:text}
+    .lede{font-size:18px;color:var(--muted);max-width:570px;margin-bottom:30px}
+    .actions{display:flex;flex-wrap:wrap;gap:12px}
+    .microcopy{font-size:13px;color:#96add8;margin-top:22px}
+    .preview-shell{position:relative;border-radius:35px;padding:14px;background:linear-gradient(145deg,rgba(116,87,255,.37),rgba(68,195,255,.11));border:1px solid rgba(165,175,255,.32);box-shadow:0 35px 90px rgba(0,0,0,.43)}
+    .preview-shell:before{content:"";position:absolute;inset:-20px;z-index:-1;border-radius:60px;background:radial-gradient(ellipse,rgba(113,74,255,.25),transparent 68%)}
+    .app-screen{border-radius:24px;padding:24px;background:#0d173a;border:1px solid rgba(159,186,255,.20)}
+    .screen-top{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:27px}
+    .screen-title{font-weight:830;font-size:17px}
+    .level{color:#7cf2d4;background:#183d44;border:1px solid rgba(124,242,212,.28);padding:6px 9px;font-weight:750;font-size:11px;border-radius:10px}
+    .screen-label{font-size:12px;color:#91a9de;font-weight:760;letter-spacing:.04em}
+    .screen-question{font-size:21px;line-height:1.35;font-weight:850;margin:10px 0 21px;letter-spacing:-.03em}
+    .map-graphic{position:relative;height:155px;border-radius:16px;overflow:hidden;background:linear-gradient(133deg,#14284b,#123d62);border:1px solid rgba(114,196,255,.25)}
+    .map-graphic svg{width:100%;height:100%;display:block}
+    .choice{border:1px solid rgba(158,181,248,.22);background:rgba(255,255,255,.035);border-radius:12px;margin-top:9px;padding:11px 15px;font-weight:760;font-size:14px}
+    .choice.correct{border-color:#49debd;color:#b1ffec;background:rgba(39,185,142,.13)}
+    .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:-37px;margin-bottom:100px}
+    .stat{background:linear-gradient(145deg,rgba(31,40,81,.93),rgba(12,22,54,.95));border:1px solid var(--line);border-radius:18px;padding:27px 28px}
+    .stat b{font-size:34px;line-height:1.2;letter-spacing:-.05em;display:block}
+    .stat span{font-size:13px;color:var(--muted)}
+    .section{padding:50px 0 70px}
+    .section-head{max-width:670px;margin-bottom:30px}
+    .kicker{font-size:12px;text-transform:uppercase;letter-spacing:.13em;color:#82defa;font-weight:850;margin-bottom:13px}
+    h2{font-size:clamp(31px,4vw,47px);letter-spacing:-.06em;line-height:1.13;margin-bottom:15px}
+    .section-head p{color:var(--muted);font-size:16px}
+    .subject-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .subject{min-height:146px;border:1px solid var(--line);border-radius:20px;padding:23px;background:linear-gradient(155deg,#15234c,#0e1637);transition:transform .2s,border-color .2s}
+    .subject:hover{transform:translateY(-3px);border-color:rgba(143,198,255,.55)}
+    .subject .symbol{font-size:24px;display:block;margin-bottom:16px}
+    .subject strong{font-size:15px;line-height:1.3;display:block}
+    .subject small{display:block;color:#91a9d4;font-size:12px;margin-top:5px}
+    .feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+    .feature{padding:30px;border:1px solid var(--line);border-radius:22px;background:rgba(20,32,70,.61)}
+    .feature .symbol{font-size:28px;display:inline-grid;place-items:center;width:55px;height:55px;border-radius:16px;margin-bottom:20px;background:rgba(139,112,255,.17)}
+    h3{font-size:19px;line-height:1.25;letter-spacing:-.025em;margin-bottom:11px}
+    .feature p{font-size:14px;color:var(--muted);margin-bottom:0}
+    .community{display:grid;grid-template-columns:1fr auto;align-items:center;gap:25px;margin:70px 0 70px;padding:39px 43px;border:1px solid rgba(40,221,151,.3);border-radius:27px;background:linear-gradient(105deg,rgba(27,114,97,.33),rgba(21,36,77,.86))}
+    .community h2{font-size:34px}
+    .community p{max-width:655px;color:#c2d6e4;margin-bottom:10px}
+    .privacy-note{color:#a7c7c7;font-size:12px}
+    .download{padding:36px 0 99px}
+    .download-panel{display:grid;grid-template-columns:1fr auto;gap:25px;align-items:center;padding:40px;border:1px solid var(--line);background:linear-gradient(128deg,#202255,#11183d);border-radius:26px}
+    .download-panel p{color:var(--muted);max-width:650px;margin-bottom:0}
+    .warning{font-size:13px;color:#bdc9e3;margin-top:15px;max-width:670px}
+    footer{border-top:1px solid var(--line);padding:35px 0 45px}
+    .footer-content{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+    .footer-content p{font-size:13px;color:#a2b5db;margin:8px 0 0}
+    .footer-links{display:flex;gap:21px;flex-wrap:wrap;font-size:13px;color:#afc3e4}
+    @media(max-width:900px){.hero{gap:30px}.subject-grid{grid-template-columns:repeat(2,1fr)}.feature-grid{grid-template-columns:repeat(2,1fr)}.community,.download-panel{grid-template-columns:1fr}.community .button,.download-panel .button{justify-self:start}}
+    @media(max-width:700px){.wrap{width:min(100% - 32px,1120px)}.header-inner{min-height:69px}.brand{font-size:17px}.mark{width:38px;height:38px}.menu-button{display:block}nav{display:none;position:absolute;left:0;right:0;top:69px;padding:18px 20px 22px;border-bottom:1px solid var(--line);background:#101533;flex-direction:column;align-items:stretch;gap:18px}nav.open{display:flex}nav a{font-size:15px}.hero{display:flex;flex-direction:column;align-items:stretch;padding:54px 0 64px;gap:38px}h1{font-size:clamp(39px,10vw,62px)}.lede{font-size:16px}.preview-shell{max-width:480px;width:100%;margin:auto}.stats{margin-top:0;margin-bottom:45px}.stat{padding:17px}.stat b{font-size:25px}.section{padding:43px 0}.subject-grid{gap:10px}.subject{padding:16px;min-height:131px}.feature-grid{grid-template-columns:1fr}.community{padding:27px 24px;margin:30px 0}.community h2{font-size:29px}.download-panel{padding:27px 24px}}
+    @media(max-width:375px){.stats{grid-template-columns:1fr;gap:8px}.stat{display:flex;align-items:center;justify-content:space-between}.stat b{font-size:25px}.screen-question{font-size:18px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.subject,.button{transition:none}}
+  </style>
+</head>
+<body>
+<div class="backdrop" aria-hidden="true"></div>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="#home" aria-label="ExamReady SA home"><span class="mark" aria-hidden="true">✦</span><span>ExamReady <span style="color:var(--cyan)">SA</span></span></a>
+    <button class="menu-button" id="menu-button" aria-label="Open navigation" aria-controls="main-nav" aria-expanded="false">☰</button>
+    <nav id="main-nav" aria-label="Main navigation">
+      <a href="#subjects">Subjects</a><a href="#features">Features</a><a href="#community">Community</a>
+      <a href="#download" class="button button-primary">Get the app ↗</a>
+    </nav>
+  </div>
+</header>
+<main>
+  <section class="wrap hero" id="home">
+    <div>
+      <span class="eyebrow"><span class="pulse" aria-hidden="true"></span> Made for South African learners</span>
+      <h1>Study smarter.<br><span class="shine">Aim higher.</span></h1>
+      <p class="lede">Your next chapter starts here. Practise Grades 10–12 school subjects with bite-sized quizzes, illustrated questions, explanations and progress you can track.</p>
+      <div class="actions"><a class="button button-primary" href="#download">Explore ExamReady SA <span aria-hidden="true">↗</span></a><a class="button button-outline" href="#subjects">See all subjects <span aria-hidden="true">↓</span></a></div>
+      <p class="microcopy">Free educational Android practice • Questions and progress work offline</p>
+    </div>
+    <div class="preview-shell" aria-label="Illustrative example of a mathematical literacy question">
+      <div class="app-screen">
+        <div class="screen-top"><div class="screen-title">✦ ExamReady SA</div><div class="level">GRADE 12</div></div>
+        <div class="screen-label">MATHEMATICAL LITERACY • VISUAL PRACTICE</div>
+        <div class="screen-question">A map uses a scale of 1:50 000. What distance does 2 cm represent?</div>
+        <div class="map-graphic">
+          <svg viewBox="0 0 400 155" role="img" aria-label="Illustrative road map showing two points A and B and a scale of 1 to 50,000">
+            <defs><pattern id="dots" width="22" height="22" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="#68afd6" opacity=".25"/></pattern></defs>
+            <rect width="400" height="155" fill="url(#dots)"/>
+            <path d="M-20 110 Q90 15 195 95T420 48" stroke="#2d6684" stroke-width="23" fill="none" opacity=".55"/>
+            <path d="M-20 110 Q90 15 195 95T420 48" stroke="#81d9ee" stroke-width="2" fill="none" opacity=".6" stroke-dasharray="6 6"/>
+            <path d="M74 100 L315 57" stroke="#80f9dc" stroke-width="3" stroke-dasharray="7 6"/>
+            <circle cx="74" cy="100" r="8" fill="#a88bff" stroke="white" stroke-width="2"/><circle cx="315" cy="57" r="8" fill="#61f2d5" stroke="white" stroke-width="2"/>
+            <text x="58" y="87" fill="#fff" font-size="16" font-weight="bold">A</text><text x="325" y="48" fill="#fff" font-size="16" font-weight="bold">B</text>
+            <rect x="140" y="113" width="130" height="29" rx="8" fill="#0a1833" opacity=".95"/><text x="152" y="133" fill="#bddeed" font-size="12" font-weight="bold">Scale 1:50 000</text>
+          </svg>
+        </div>
+        <div class="choice">A. 500 metres</div><div class="choice correct">✓ B. 1 kilometre</div><div class="choice">C. 10 kilometres</div>
+        <p style="font-size:11px;color:#8fa7cd;margin:16px 0 0">Illustrative question preview — not an app screenshot</p>
+      </div>
+    </div>
+  </section>
+  <div class="wrap stats" aria-label="App at a glance"><div class="stat"><b>4,840</b><span>Practice questions</span></div><div class="stat"><b>8</b><span>School subjects</span></div><div class="stat"><b>10–12</b><span>Grades supported</span></div></div>
+  <section class="wrap section" id="subjects">
+    <div class="section-head"><p class="kicker">Pick your path</p><h2>Subjects that open doors.</h2><p>Choose your grade and explore subject-focused practice sessions. Each subject has answer explanations and estimated difficulty levels.</p></div>
+    <div class="subject-grid">
+      <div class="subject"><span class="symbol" aria-hidden="true">∑</span><strong>Mathematics</strong><small>Numbers • Functions</small></div>
+      <div class="subject"><span class="symbol" aria-hidden="true">📐</span><strong>Mathematical Literacy</strong><small>Everyday problem solving</small></div>
+      <div class="subject"><span class="symbol" aria-hidden="true">🧬</span><strong>Life Sciences</strong><small>Living systems</small></div>
+      <div class="subject"><span class="symbol" aria-hidden="true">⚗</span><strong>Physical Sciences</strong><small>Physics • Chemistry</small></div>
+      <div class="subject"><span class="symbol" aria-hidden="true">📜</span><strong>History</strong><small>Events • Evidence</small></div>
+      <div class="subject"><span class="symbol" aria-hidden="true">🌾</span><strong>Agricultural Sciences</strong><small>Soil • Farming</small></div>
+      <div class="subject"><span class="symbol" aria-hidden="true">🌍</span><strong>Geography</strong><small>Maps • Environments</small></div>
+      <div class="subject"><span class="symbol" aria-hidden="true">Aa</span><strong>English First Additional Language</strong><small>Grammar • Reading</small></div>
+    </div>
+  </section>
+  <section class="wrap section" id="features">
+    <div class="section-head"><p class="kicker">Learn your way</p><h2>More than just a quiz.</h2><p>Short practice sessions help you find your weak spots, revisit concepts and see where you’re improving.</p></div>
+    <div class="feature-grid">
+      <article class="feature"><span class="symbol" aria-hidden="true">🧠</span><h3>Choose your challenge</h3><p>Practise by grade, topic and Easy, Medium or Hard levels. Choose shorter or longer sessions.</p></article>
+      <article class="feature"><span class="symbol" aria-hidden="true">◈</span><h3>See what the question means</h3><p>Hundreds of illustrated exercises include maps, graphs, circuits and other visuals to support understanding.</p></article>
+      <article class="feature"><span class="symbol" aria-hidden="true">↗</span><h3>Track your progress</h3><p>Review scores, retry mistakes and practise topics you have not covered yet. Progress stays on your device.</p></article>
+    </div>
+  </section>
+  <section class="wrap" id="community">
+    <div class="community"><div><p class="kicker" style="color:#73e7ba">Learn together</p><h2>Your study community awaits.</h2><p>Join the optional ExamReady SA WhatsApp group to connect with other learners and share study motivation.</p><p class="privacy-note">Privacy: members of a WhatsApp group may see each other’s phone numbers. If you are under 18, ask a parent or guardian before joining.</p></div>
+      <a class="button button-green" href="https://chat.whatsapp.com/JvQhDGKqd6wEzZ04oRPVIa?s=cl&amp;p=a&amp;mlu=4&amp;ilr=4" target="_blank" rel="noopener noreferrer">↗ Join WhatsApp group</a>
+    </div>
+  </section>
+  <section class="wrap download" id="download">
+    <div class="download-panel"><div><p class="kicker">Your next step starts here</p><h2>Ready to practise?</h2><p>ExamReady SA Android v1.2.1 is a test build. Public APK hosting is being prepared. The existing site is the current place to check for a download.</p></div>
+      <a class="button button-primary" href="https://examready-sa.ramashiaemily.chatgpt.site/" target="_blank" rel="noopener noreferrer">Visit existing app website ↗</a>
+    </div>
+    <p class="warning">ExamReady SA is independent educational practice. Its questions are not officially CAPS-certified or independently teacher-reviewed and do not replace textbooks, teachers or past examination papers.</p>
+  </section>
+</main>
+<footer><div class="wrap footer-content"><div><strong>✦ ExamReady SA</strong><p>Made for learning in South Africa. © <span id="year">2026</span> ExamReady SA.</p></div><div class="footer-links"><a href="#home">Back to top ↑</a><a href="https://examready-sa-privacy.ramashiaemily.chatgpt.site/" target="_blank" rel="noopener noreferrer">Privacy policy ↗</a><a href="https://examready-sa.ramashiaemily.chatgpt.site/" target="_blank" rel="noopener noreferrer">Original website ↗</a></div></div></footer>
+<script>
+  (function () {
+    var toggle=document.getElementById('menu-button');
+    var nav=document.getElementById('main-nav');
+    if(toggle&&nav){toggle.addEventListener('click',function(){var isOpen=nav.classList.toggle('open');toggle.setAttribute('aria-expanded',String(isOpen));toggle.setAttribute('aria-label',isOpen?'Close navigation':'Open navigation');});nav.addEventListener('click',function(event){if(event.target.closest('a')){nav.classList.remove('open');toggle.setAttribute('aria-expanded','false');toggle.setAttribute('aria-label','Open navigation');}});}
+    var year=document.getElementById('year');if(year)year.textContent=String(new Date().getFullYear());
+  })();
+</script>
+</body>
+</html>
