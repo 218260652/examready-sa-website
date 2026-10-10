@@ -32,3 +32,14 @@ For each new version:
 5. Do **not** increase the minimum-supported version until the download is live, tested and consistently signed. Do not publish forced-update instructions that strand users.
 
 The original ChatGPT Sites URL and app update checker are separate; migrating the existing Android update-check URL requires an Android app code change and a new APK. This site intentionally has no promotional content, analytics, external scripts or optional study-group links.
+
+## v1.2.2 GitHub Pages migration
+
+The Android **v1.2.2** build (version code 10) checks `https://218260652.github.io/examready-sa-website/updates/android.json` and opens this site's `#download` section.
+
+The verified v1.2.2 APK is **11,334,266 bytes** with SHA-256 `c66c36b466776fd14e869ef17ac6ee1019476e89a2033b0247b5a6d394b87781`.
+
+To publish it, upload exactly `ExamReadySA-1.2.2.apk` to `downloads/` on `main`. The workflow `.github/workflows/publish-apk-1.2.2.yml` verifies the exact SHA-256 and ZIP structure before updating `updates/latest.json` and `updates/android.json` to version 1.2.2. It retains `minimumSupportedVersionCode = 1` so the migration is optional. GitHub Actions needs repository `contents: write` permission for its version-metadata commit.
+
+**Do not manually raise the latest version** before GitHub Pages serves the new APK. Users of v1.2.1 or earlier still use the old site's update policy until they install v1.2.2 manually. Different test signing certificates may prevent an in-place upgrade; do not promise that local progress will be preserved without verifying compatible signatures.
+
