@@ -4,6 +4,8 @@ on:
     branches: [main]
     paths:
       - 'downloads/ExamReadySA-v1.2.2.apk'
+      - '.github/workflows/verify-signed-v1.2.2.yml'
+  workflow_dispatch:
 permissions:
   contents: write
 concurrency:
@@ -26,7 +28,7 @@ jobs:
         run: |
           python3 - <<'PY'
           from pathlib import Path
-          import hashlib, subprocess, re, xml.etree.ElementTree as ET, os
+          import hashlib, subprocess, re, os
           apk=Path('downloads/ExamReadySA-v1.2.2.apk')
           expected_hash='e5a846ae56df82b7ed5bd4ce12e593c81be6c39cf49377ada32126563469c226'
           expected_signer='dd4c342fcfa66ac2d9b7b37c1a4cd55d4c998be78dbe2479489b031d6fe38dc2'
@@ -37,11 +39,12 @@ jobs:
           match=re.search(r'Signer #1 certificate SHA-256 digest: ([0-9a-f]+)',v)
           assert match and match.group(1)==expected_signer,'Unknown signing certificate'
           assert 'Verified using v2 scheme (APK Signature Scheme v2): true' in v, 'Signature not valid'
-          manifest=subprocess.run([tools+'apkanalyzer','manifest','print',str(apk)],capture_output=True,text=True,check=True).stdout
-          root=ET.fromstring(manifest)
-          ns='{http://schemas.android.com/apk/res/android}'
-          assert root.get('package')=='za.co.examready.prototype','Wrong package'
-          assert root.get(ns+'versionCode')=='10','Wrong APK version'
+          badging=subprocess.run([tools+'aapt','dump','badging',str(apk)],capture_output=True,text=True,check=True).stdout
+          match=re.search(r"^package: name='([^']+)' versionCode='([^']+)' versionName='([^']+)'",badging,re.MULTILINE)
+          assert match is not None, 'Cannot read signed APK package metadata'
+          assert match.group(1)=='za.co.examready.prototype', 'Wrong package'
+          assert match.group(2)=='10', 'Wrong APK version code'
+          assert match.group(3)=='1.2.2', 'Wrong APK version name'
           print('Production-signed v1.2.2 package, code, certificate and checksum verified.')
           PY
       - name: Switch website to new verified APK
