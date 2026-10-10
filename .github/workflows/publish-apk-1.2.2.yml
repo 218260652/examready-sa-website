@@ -1,0 +1,66 @@
+name: Verify and publish ExamReady SA v1.2.2
+on:
+  push:
+    branches: [main]
+    paths:
+      - "downloads/ExamReadySA-1.2.2.apk"
+permissions:
+  contents: write
+concurrency:
+  group: verified-examready-apk-release
+  cancel-in-progress: false
+jobs:
+  verify-and-publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check uploaded APK and update public version metadata
+        run: |
+          python3 - <<'PY'
+          import hashlib, json, zipfile
+          from pathlib import Path
+          apk=Path('downloads/ExamReadySA-1.2.2.apk')
+          expected_hash='c66c36b466776fd14e869ef17ac6ee1019476e89a2033b0247b5a6d394b87781'
+          expected_size=11334266
+          assert apk.is_file(), 'APK not found at required path'
+          assert apk.stat().st_size == expected_size, 'Wrong APK size'
+          assert hashlib.sha256(apk.read_bytes()).hexdigest() == expected_hash, 'APK checksum mismatch'
+          with zipfile.ZipFile(apk) as z:
+              assert z.testzip() is None, 'Corrupted APK'
+              assert 'AndroidManifest.xml' in z.namelist() and 'classes.dex' in z.namelist(), 'Not a valid Android APK'
+          manifest_path=Path('updates/latest.json')
+          policy_path=Path('updates/android.json')
+          manifest=json.loads(manifest_path.read_text())
+          policy=json.loads(policy_path.read_text())
+          assert policy['packageName'] == 'za.co.examready.prototype'
+          assert policy['minimumSupportedVersionCode'] <= 1, 'Do not enforce updates with test signing keys'
+          manifest.update({
+              'versionName':'1.2.2',
+              'versionCode':10,
+              'apkPath':str(apk),
+              'sizeBytes':expected_size,
+              'sha256':expected_hash,
+              'releaseNotes':'Update checks now use the official GitHub Pages download website.'
+          })
+          policy.update({
+              'latestVersionCode':10,
+              'latestVersionName':'1.2.2',
+              'minimumSupportedVersionCode':1,
+              'message':'ExamReady SA v1.2.2 is available. It uses the official GitHub Pages update website.'
+          })
+          manifest_path.write_text(json.dumps(manifest,indent=2)+'\n')
+          policy_path.write_text(json.dumps(policy,indent=2)+'\n')
+          print('Verified release APK and updated manifest; optional update only.')
+          PY
+      - name: Publish updated version details
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add updates/latest.json updates/android.json
+          if git diff --cached --quiet; then
+            echo "Version metadata is already correct"
+          else
+            git commit -m "Publish verified ExamReady SA v1.2.2 release"
+            git push origin HEAD:main
+          fi
