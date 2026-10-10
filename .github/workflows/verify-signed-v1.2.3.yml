@@ -4,8 +4,6 @@ on:
     branches: [main]
     paths:
       - 'downloads/ExamReadySA-v1.2.3.apk'
-      - '.github/workflows/verify-signed-v1.2.3.yml'
-  workflow_dispatch:
 permissions:
   contents: write
 concurrency:
@@ -67,7 +65,7 @@ jobs:
           d=json.loads(p.read_text())
           assert d['packageName']=='za.co.examready.prototype'
           d.update(latestVersionCode=11,latestVersionName='1.2.3',minimumSupportedVersionCode=1,
-             message='ExamReady SA v1.2.3 is available. This is a one-time signing migration from earlier test builds; uninstalling your old app can remove saved progress. After migration, future releases can update normally.')
+             message='ExamReady SA v1.2.3 is available. Teen learners aged 13–17 can see privacy-protected, non-personalized G-rated banners where approved; adults can use optional advertising. Version 1.2.2 can update in place.')
           p.write_text(json.dumps(d,indent=2)+'\n')
           PY
           git config user.name 'github-actions[bot]'
