@@ -33,13 +33,12 @@ For each new version:
 
 The original ChatGPT Sites URL and app update checker are separate; migrating the existing Android update-check URL requires an Android app code change and a new APK. This site intentionally has no promotional content, analytics, external scripts or optional study-group links.
 
-## v1.2.2 GitHub Pages migration
+## v1.2.2 migration status
 
-The Android **v1.2.2** build (version code 10) checks `https://218260652.github.io/examready-sa-website/updates/android.json` and opens this site's `#download` section.
+The Android v1.2.2 source now points its update checker and update button to this GitHub Pages download website. The new debug APK built and passed emulator testing.
 
-The verified v1.2.2 APK is **11,334,266 bytes** with SHA-256 `c66c36b466776fd14e869ef17ac6ee1019476e89a2033b0247b5a6d394b87781`.
+**Hold public release:** On 10 October 2026, a certificate comparison confirmed that the installed v1.2.1 testing APK and newly built v1.2.2 testing APK have different signing certificates. Android will refuse to install the latter over the former. Uninstalling the old APK can erase locally saved learner progress.
 
-To publish it, upload exactly `ExamReadySA-1.2.2.apk` to `downloads/` on `main`. The workflow `.github/workflows/publish-apk-1.2.2.yml` verifies the exact SHA-256 and ZIP structure before updating `updates/latest.json` and `updates/android.json` to version 1.2.2. It retains `minimumSupportedVersionCode = 1` so the migration is optional. GitHub Actions needs repository `contents: write` permission for its version-metadata commit.
+The public download and update manifest must stay at v1.2.1 until the signing and migration plan is settled. No automated v1.2.2 publishing workflow is enabled. Do not raise latestVersionCode or minimumSupportedVersionCode prematurely.
 
-**Do not manually raise the latest version** before GitHub Pages serves the new APK. Users of v1.2.1 or earlier still use the old site's update policy until they install v1.2.2 manually. Different test signing certificates may prevent an in-place upgrade; do not promise that local progress will be preserved without verifying compatible signatures.
-
+Use a securely stored permanent signing key for future releases, and test upgrading between two consecutive production-signed builds before promising update-in-place support.
