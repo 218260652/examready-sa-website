@@ -1,4 +1,4 @@
-name: Publish verified production-signed ExamReady SA v1.2.2
+name: Verify historical production-signed ExamReady SA v1.2.2
 on:
   push:
     branches: [main]
@@ -7,7 +7,7 @@ on:
       - '.github/workflows/verify-signed-v1.2.2.yml'
   workflow_dispatch:
 permissions:
-  contents: write
+  contents: read
 concurrency:
   group: examready-publish-v122
   cancel-in-progress: false
@@ -47,33 +47,3 @@ jobs:
           assert match.group(3)=='1.2.2', 'Wrong APK version name'
           print('Production-signed v1.2.2 package, code, certificate and checksum verified.')
           PY
-      - name: Switch website to new verified APK
-        run: |
-          python3 - <<'PY'
-          from pathlib import Path
-          import json
-          p=Path('updates/latest.json')
-          d=json.loads(p.read_text())
-          d.update(
-             versionName='1.2.2',
-             versionCode=10,
-             apkPath='downloads/ExamReadySA-v1.2.2.apk',
-             sizeBytes=9597905,
-             sha256='e5a846ae56df82b7ed5bd4ce12e593c81be6c39cf49377ada32126563469c226',
-             releaseNotes='Permanent release signing and GitHub Pages update checks. First migration from old debug versions requires reinstall.'
-          )
-          p.write_text(json.dumps(d,indent=2)+'\n')
-          p=Path('updates/android.json')
-          d=json.loads(p.read_text())
-          assert d['packageName']=='za.co.examready.prototype'
-          d.update(latestVersionCode=10,latestVersionName='1.2.2',minimumSupportedVersionCode=1,
-             message='ExamReady SA v1.2.2 is available. This is a one-time signing migration from earlier test builds; uninstalling your old app can remove saved progress. After migration, future releases can update normally.')
-          p.write_text(json.dumps(d,indent=2)+'\n')
-          PY
-          git config user.name 'github-actions[bot]'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add updates/latest.json updates/android.json
-          if ! git diff --cached --quiet; then
-            git commit -m 'Publish verified permanent-signed ExamReady SA v1.2.2'
-            git push origin HEAD:main
-          fi

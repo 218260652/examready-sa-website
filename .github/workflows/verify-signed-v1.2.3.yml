@@ -1,11 +1,11 @@
-name: Publish verified production-signed ExamReady SA v1.2.3
+name: Verify historical production-signed ExamReady SA v1.2.3
 on:
   push:
     branches: [main]
     paths:
       - 'downloads/ExamReadySA-v1.2.3.apk'
 permissions:
-  contents: write
+  contents: read
 concurrency:
   group: examready-publish-v123
   cancel-in-progress: false
@@ -45,33 +45,3 @@ jobs:
           assert match.group(3)=='1.2.3', 'Wrong APK version name'
           print('Production-signed v1.2.3 package, code, certificate and checksum verified.')
           PY
-      - name: Switch website to new verified APK
-        run: |
-          python3 - <<'PY'
-          from pathlib import Path
-          import json
-          p=Path('updates/latest.json')
-          d=json.loads(p.read_text())
-          d.update(
-             versionName='1.2.3',
-             versionCode=11,
-             apkPath='downloads/ExamReadySA-v1.2.3.apk',
-             sizeBytes=9597905,
-             sha256='eef26af0d2591c8051bba94658b158e55ab295b40ccb7e499a4906739cd46200',
-             releaseNotes='Non-personalized, G-rated advertisements for eligible teens 13–17 and adults, with updated privacy controls.'
-          )
-          p.write_text(json.dumps(d,indent=2)+'\n')
-          p=Path('updates/android.json')
-          d=json.loads(p.read_text())
-          assert d['packageName']=='za.co.examready.prototype'
-          d.update(latestVersionCode=11,latestVersionName='1.2.3',minimumSupportedVersionCode=1,
-             message='ExamReady SA v1.2.3 is available. Teen learners aged 13–17 can see privacy-protected, non-personalized G-rated banners where approved; adults can use optional advertising. Version 1.2.2 can update in place.')
-          p.write_text(json.dumps(d,indent=2)+'\n')
-          PY
-          git config user.name 'github-actions[bot]'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add updates/latest.json updates/android.json
-          if ! git diff --cached --quiet; then
-            git commit -m 'Publish verified permanent-signed ExamReady SA v1.2.3'
-            git push origin HEAD:main
-          fi

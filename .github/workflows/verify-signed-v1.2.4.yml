@@ -1,0 +1,29 @@
+name: Verify production ExamReady SA v1.2.4
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'downloads/ExamReadySA-v1.2.4*'
+      - 'scripts/verify_release.py'
+      - '.github/workflows/verify-signed-v1.2.4.yml'
+      - 'updates/*.json'
+      - 'index.html'
+permissions:
+  contents: read
+concurrency:
+  group: examready-verify-v124
+  cancel-in-progress: false
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - uses: android-actions/setup-android@v4
+      - run: sdkmanager 'build-tools;34.0.0'
+      - name: Verify shipped APK and update metadata
+        run: python3 scripts/verify_release.py d9537c3e2b37b2517f1f2abf49572e725915d82a
