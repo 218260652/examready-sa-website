@@ -43,15 +43,16 @@
   <section class="panel" id="download" aria-labelledby="download-title">
     <span class="eyebrow">Official Android downloads</span>
     <h1 id="download-title">Download the latest update</h1>
-    <p class="intro">Get the newest version of ExamReady SA for your Android phone.</p>
-    <div class="version"><strong id="version">Version 1.2.1</strong><span class="dot" aria-hidden="true"></span><span id="file-size">10.8 MB APK</span><span class="dot" aria-hidden="true"></span><span>Android 7+</span></div>
+    <p class="intro">Practise offline across 11 subjects, including Accounting, Business Studies and Economics.</p>
+    <div class="version"><strong id="version">Version 1.2.4</strong><span class="dot" aria-hidden="true"></span><span id="file-size">APK download</span><span class="dot" aria-hidden="true"></span><span>Android 7+</span></div>
     <a id="apk-download" class="download" aria-disabled="true" tabindex="-1">Checking download…</a>
     <p class="status" id="download-status" role="status" aria-live="polite">Checking whether the APK file is available.</p>
+    <p class="status" id="release-notes">4,500 new practice variants · 500 per new subject in each grade.</p>
     <div class="steps">
       <h2>How to update</h2>
       <p>Download the APK and open it on your Android phone. If you have version 1.2.2 or later signed with the permanent release key, install over your existing app to keep saved progress. Older test builds (v1.2.1 and earlier) have a different signing certificate and need a one-time reinstall, which can erase saved progress.</p>
     </div>
-    <div class="caution">One-time migration for older test builds: uninstalling removes local app data and may erase quiz progress. Version 1.2.2 is signed with the new permanent release certificate. Future updates must use the same signing key. This APK is distributed outside Google Play.</div>
+    <div class="caution">One-time migration for older test builds: uninstalling removes local app data and may erase quiz progress. Versions 1.2.2 and later use the permanent release certificate. Future updates must use the same signing key. This APK is distributed outside Google Play.</div>
   </section>
 </main>
 <footer>ExamReady SA · App updates only · <span id="year">2026</span></footer>
@@ -72,13 +73,16 @@
       var response=await fetch('./updates/latest.json?nocache='+Date.now(),{cache:'no-store'});
       if(!response.ok)throw new Error('Release information unavailable');
       var release=await response.json();
-      if(!release || !/^\d+\.\d+\.\d+$/.test(release.versionName)||!/^downloads\/ExamReadySA-[A-Za-z0-9._-]+\.apk$/.test(release.apkPath))throw new Error('Invalid release information');
+      if(!release || !Number.isInteger(release.versionCode)||release.versionCode<1||!/^[a-f0-9]{64}$/.test(release.sha256)||!/^\d+\.\d+\.\d+$/.test(release.versionName)||!/^downloads\/ExamReadySA-[A-Za-z0-9._-]+\.apk$/.test(release.apkPath))throw new Error('Invalid release information');
       version.textContent='Version '+release.versionName;
       if(Number.isFinite(release.sizeBytes)&&release.sizeBytes>0)size.textContent=(release.sizeBytes/1048576).toFixed(1)+' MB APK';
       var url=new URL(release.apkPath,window.location.href);
       if(url.origin!==window.location.origin)throw new Error('Unsafe file location');
       var head=await fetch(url.href,{method:'HEAD',cache:'no-store'});
       if(!head.ok)throw new Error('APK file has not been uploaded');
+      var actualSize=Number(head.headers.get('content-length'));
+      if(!Number.isSafeInteger(release.sizeBytes)||release.sizeBytes<=0||(actualSize>0&&actualSize!==release.sizeBytes))throw new Error('APK size mismatch');
+      document.getElementById('release-notes').textContent=release.releaseNotes||'';
       button.href=url.href;button.download=url.pathname.split('/').pop();
       button.removeAttribute('aria-disabled');button.removeAttribute('tabindex');button.textContent='↓ Download ExamReady SA';
       status.textContent='APK available · Tap to download the update.';status.className='status good';

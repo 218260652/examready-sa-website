@@ -1,10 +1,12 @@
 {
   "appName": "ExamReady SA",
   "packageName": "za.co.examready.prototype",
-  "versionName": "1.2.3",
-  "versionCode": 11,
-  "apkPath": "downloads/ExamReadySA-v1.2.3.apk",
-  "sizeBytes": 9597905,
-  "sha256": "eef26af0d2591c8051bba94658b158e55ab295b40ccb7e499a4906739cd46200",
-  "releaseNotes": "Non-personalized, G-rated advertisements for eligible teens 13\u201317 and adults, with updated privacy controls."
+  "versionName": "1.2.4",
+  "versionCode": 12,
+  "apkPath": "downloads/ExamReadySA-v1.2.4.apk",
+  "sizeBytes": 9769937,
+  "sha256": "55b3eb9a445244c4faad5dd828273359485ff00fa0a470ac237a361982d2337f",
+  "releaseNotes": "4,500 new practice variants across Accounting, Business Studies and Economics for Grades 10–12. Offline study and saved progress retained.",
+  "questionCount": 9340,
+  "subjectCount": 11
 }

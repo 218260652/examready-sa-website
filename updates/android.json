@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "packageName": "za.co.examready.prototype",
-  "latestVersionCode": 11,
-  "latestVersionName": "1.2.3",
+  "latestVersionCode": 12,
+  "latestVersionName": "1.2.4",
   "minimumSupportedVersionCode": 1,
-  "message": "ExamReady SA v1.2.3 is available. Teen learners aged 13\u201317 can see privacy-protected, non-personalized G-rated banners where approved; adults can use optional advertising. Version 1.2.2 can update in place."
+  "message": "ExamReady SA v1.2.4 adds Accounting, Business Studies and Economics, with 500 practice variants per subject for each of Grades 10–12. Install over your existing v1.2.2 or v1.2.3 app to keep saved progress. Do not uninstall first. Updates remain optional."
 }
