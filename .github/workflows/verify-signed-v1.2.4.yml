@@ -1,4 +1,4 @@
-name: Verify production ExamReady SA v1.2.4
+name: Verify distributed ExamReady SA APK and update metadata
 on:
   push:
     branches: [main]
