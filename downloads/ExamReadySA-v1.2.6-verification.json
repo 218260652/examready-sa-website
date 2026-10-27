@@ -1,0 +1,20 @@
+{
+  "packageName": "za.co.examready.prototype",
+  "versionCode": 14,
+  "versionName": "1.2.6",
+  "apkPath": "downloads/ExamReadySA-v1.2.6.apk",
+  "sizeBytes": 9790417,
+  "sha256": "03764b25cfe82a44ba1e45bc1673c359bb992d088dd40c7bc4df223e2655bb37",
+  "signingCertificateSha256": "dd4c342fcfa66ac2d9b7b37c1a4cd55d4c998be78dbe2479489b031d6fe38dc2",
+  "sourceCommit": "481c52dcc3b9ab6523f4a0cabadc148bcfb8ae48",
+  "questionCount": 9340,
+  "subjectCount": 11,
+  "upgradeFrom": [
+    "1.2.2",
+    "1.2.3",
+    "1.2.4",
+    "1.2.5"
+  ],
+  "progressPreserved": true,
+  "signedOfflineSmoke": true
+}
