@@ -1,12 +1,12 @@
 {
   "appName": "ExamReady SA",
   "packageName": "za.co.examready.prototype",
-  "versionName": "1.2.5",
-  "versionCode": 13,
-  "apkPath": "downloads/ExamReadySA-v1.2.5.apk",
-  "sizeBytes": 9782225,
-  "sha256": "0f6146211f8863f2c69d0d0187f1218c7d51122f81fd208c34319086381ef1df",
-  "releaseNotes": "Study tools pilot: ask a tutor, make flashcards and generate source-referenced quizzes from selected PDF, DOCX or TXT notes. This feature requires internet and sends the selected document to a staging AI service; do not use sensitive files. Existing offline practice and progress remain.",
+  "versionName": "1.2.6",
+  "versionCode": 14,
+  "apkPath": "downloads/ExamReadySA-v1.2.6.apk",
+  "sizeBytes": 9790417,
+  "sha256": "03764b25cfe82a44ba1e45bc1673c359bb992d088dd40c7bc4df223e2655bb37",
+  "releaseNotes": "v1.2.6 improves optional AI Study tools: structured tutor explanations, interactive one-question-at-a-time quizzes, and illustrated flashcards. Study tools require internet and upload the selected notes to a staging AI service; Cloudflare receives only a short illustration prompt. Do not upload sensitive documents. Exam practice and saved progress remain available offline.",
   "questionCount": 9340,
   "subjectCount": 11
 }
