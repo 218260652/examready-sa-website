@@ -1,12 +1,12 @@
 {
   "appName": "ExamReady SA",
   "packageName": "za.co.examready.prototype",
-  "versionName": "1.2.4",
-  "versionCode": 12,
-  "apkPath": "downloads/ExamReadySA-v1.2.4.apk",
-  "sizeBytes": 9769937,
-  "sha256": "55b3eb9a445244c4faad5dd828273359485ff00fa0a470ac237a361982d2337f",
-  "releaseNotes": "4,500 new practice variants across Accounting, Business Studies and Economics for Grades 10–12. Offline study and saved progress retained.",
+  "versionName": "1.2.5",
+  "versionCode": 13,
+  "apkPath": "downloads/ExamReadySA-v1.2.5.apk",
+  "sizeBytes": 9782225,
+  "sha256": "0f6146211f8863f2c69d0d0187f1218c7d51122f81fd208c34319086381ef1df",
+  "releaseNotes": "Study tools pilot: ask a tutor, make flashcards and generate source-referenced quizzes from selected PDF, DOCX or TXT notes. This feature requires internet and sends the selected document to a staging AI service; do not use sensitive files. Existing offline practice and progress remain.",
   "questionCount": 9340,
   "subjectCount": 11
 }
