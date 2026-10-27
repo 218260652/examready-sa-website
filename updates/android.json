@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "packageName": "za.co.examready.prototype",
-  "latestVersionCode": 12,
-  "latestVersionName": "1.2.4",
+  "latestVersionCode": 13,
+  "latestVersionName": "1.2.5",
   "minimumSupportedVersionCode": 1,
-  "message": "ExamReady SA v1.2.4 adds Accounting, Business Studies and Economics, with 500 practice variants per subject for each of Grades 10–12. Install over your existing v1.2.2 or v1.2.3 app to keep saved progress. Do not uninstall first. Updates remain optional."
+  "message": "ExamReady SA v1.2.5 adds optional Study tools for selected PDF, DOCX and TXT notes: tutor, flashcards and source-referenced quizzes. Study tools need internet and send the selected document to a staging AI service; do not use sensitive files. Existing exam practice and progress remain. Install over signed v1.2.2, v1.2.3 or v1.2.4. Updates stay optional."
 }
