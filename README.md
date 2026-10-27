@@ -3,15 +3,15 @@
 This repository serves the verified ExamReady SA APK through GitHub Pages:
 https://218260652.github.io/examready-sa-website/
 
-## Release v1.2.4
+## Release v1.2.5
 
-The app contains 9,340 original practice records across 11 subjects. Accounting, Business Studies and Economics each have 500 records for each of Grades 10, 11 and 12 (4,500 additional records). Each new grade-subject pool revisits 20 skill families through 25 numeric or contextual variants. They are not official DBE exam questions, independently educator-moderated content or a complete CAPS course.
+The app contains 9,340 original practice records across 11 subjects. v1.2.5 adds an optional Study tools pilot: learners can select PDF, DOCX or TXT notes to ask a tutor, generate flashcards or create multiple-choice quizzes with source-page references. The selected document is sent to an AI staging service, so this feature requires internet and should not be used with sensitive files. Exam practice and saved progress remain available offline. Accounting, Business Studies and Economics each have 500 records for each of Grades 10, 11 and 12 (4,500 additional records). Each new grade-subject pool revisits 20 skill families through 25 numeric or contextual variants. They are not official DBE exam questions, independently educator-moderated content or a complete CAPS course.
 
-Release verification evidence is stored beside the APK in `downloads/ExamReadySA-v1.2.4-verification.json`. The permanent signing certificate SHA-256 is `dd4c342fcfa66ac2d9b7b37c1a4cd55d4c998be78dbe2479489b031d6fe38dc2`.
+Release verification evidence is stored beside the APK in `downloads/ExamReadySA-v1.2.5-verification.json`. The permanent signing certificate SHA-256 is `dd4c342fcfa66ac2d9b7b37c1a4cd55d4c998be78dbe2479489b031d6fe38dc2`.
 
 ## Preserve progress
 
-Install the new APK over production-signed v1.2.2 or v1.2.3. Do not uninstall first. Release checks must verify real in-place upgrades preserve existing scores, question coverage, topic totals and history. All 4,840 previous question IDs, prompts, options and answer indices remain intact.
+Install the new APK over production-signed v1.2.2, v1.2.3 or v1.2.4. Do not uninstall first. Release checks verify real in-place upgrades preserve existing scores, question coverage, topic totals and history. All 4,840 previous question IDs, prompts, options and answer indices remain intact.
 
 Pre-v1.2.2 test APKs use a different debug certificate and cannot upgrade in place to the permanent certificate. Uninstalling those old builds may erase local progress. Do not tell these users that progress preservation is guaranteed.
 
