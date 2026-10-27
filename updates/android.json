@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "packageName": "za.co.examready.prototype",
-  "latestVersionCode": 13,
-  "latestVersionName": "1.2.5",
+  "latestVersionCode": 14,
+  "latestVersionName": "1.2.6",
   "minimumSupportedVersionCode": 1,
-  "message": "ExamReady SA v1.2.5 adds optional Study tools for selected PDF, DOCX and TXT notes: tutor, flashcards and source-referenced quizzes. Study tools need internet and send the selected document to a staging AI service; do not use sensitive files. Existing exam practice and progress remain. Install over signed v1.2.2, v1.2.3 or v1.2.4. Updates stay optional."
+  "message": "ExamReady SA v1.2.6 adds clearer tutor explanations, interactive source-grounded quizzes and illustrated flashcards to optional Study tools. Study tools need internet and upload selected PDF, DOCX or TXT notes to the staging AI service; Cloudflare receives only a short illustration prompt. Avoid sensitive documents. Offline exam practice and progress remain available. Install over signed v1.2.2–v1.2.5 to preserve progress. Updates remain optional."
 }
