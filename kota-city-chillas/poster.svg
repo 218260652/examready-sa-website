@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1620" viewBox="0 0 1080 1620" role="img" aria-label="Kota City Chillas first edition event poster, 21 November 2026, Duthuni Greenview Car Wash, R100 early bird with kota and free mocktail">
+<defs>
+<linearGradient id="bg" x2="0" y2="1"><stop stop-color="#08090d"/><stop offset=".39" stop-color="#220b0c"/><stop offset=".78" stop-color="#10090c"/><stop offset="1" stop-color="#070606"/></linearGradient>
+<radialGradient id="gold" cx=".51" cy=".41" r=".54"><stop stop-color="#ffc83a" stop-opacity=".9"/><stop offset=".42" stop-color="#fb6b08" stop-opacity=".47"/><stop offset="1" stop-color="#fb3608" stop-opacity="0"/></radialGradient>
+<linearGradient id="flame" x2=".8" y2="1"><stop stop-color="#ffe16a"/><stop offset=".35" stop-color="#ffc21a"/><stop offset=".8" stop-color="#ff5915"/><stop offset="1" stop-color="#e01d15"/></linearGradient>
+<linearGradient id="skin" x2="0" y2="1"><stop stop-color="#a65334"/><stop offset="1" stop-color="#582319"/></linearGradient>
+<linearGradient id="bread" x2="0" y2="1"><stop stop-color="#ffe28a"/><stop offset=".45" stop-color="#ea9724"/><stop offset="1" stop-color="#8c3a0b"/></linearGradient>
+<linearGradient id="bread2" x2="0" y2="1"><stop stop-color="#fcd270"/><stop offset="1" stop-color="#be6216"/></linearGradient>
+<linearGradient id="drink" x2="0" y2="1"><stop stop-color="#ffb639"/><stop offset=".47" stop-color="#f75228"/><stop offset="1" stop-color="#a91e26"/></linearGradient>
+<linearGradient id="panel" x2="0" y2="1"><stop stop-color="#2a1616"/><stop offset="1" stop-color="#070909"/></linearGradient>
+<filter id="glow" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="13"/></filter>
+<filter id="shadow" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="5"/></filter>
+<pattern id="dots" width="52" height="52" patternUnits="userSpaceOnUse"><circle cx="6" cy="8" r="2.3" fill="#ffd11c" opacity=".22"/><circle cx="32" cy="42" r="1.8" fill="#df2622" opacity=".32"/></pattern>
+<g id="spark"><path d="M0 -13 L3 -3 L13 0 L3 3 L0 13 L-3 3 L-13 0 L-3 -3Z" fill="#ffcb29"/></g>
+<g id="flames"><path d="M0 33 Q-31 8 -14 -32 Q-12 -13 2 -11 Q7 -35 24 -50 Q22 -14 37 5 Q45 27 26 38 Q13 43 0 33Z" fill="#f22d17"/><path d="M4 30 Q-11 8 8 -14 Q7 2 20 -2 Q33 19 17 32Z" fill="#ffc928"/></g>
+</defs>
+<rect width="1080" height="1620" fill="url(#bg)"/><rect width="1080" height="1620" fill="url(#dots)"/>
+<ellipse cx="536" cy="610" rx="575" ry="485" fill="url(#gold)"/>
+<ellipse cx="548" cy="580" rx="424" ry="424" fill="none" stroke="#ffc51c" stroke-width="8" opacity=".32"/>
+<ellipse cx="548" cy="580" rx="450" ry="442" fill="none" stroke="#ff8a10" stroke-width="3" stroke-dasharray="50 18 5 16" opacity=".55"/>
+<path d="M-25 480 Q120 350 230 380 M815 360 Q995 310 1110 480 M-30 1050 Q108 1100 240 1030 M850 1040 Q1000 1100 1115 1010" fill="none" stroke="#e92b18" stroke-width="20" opacity=".5"/>
+<use href="#spark" x="89" y="159"/><use href="#spark" x="980" y="240"/><use href="#spark" x="42" y="905"/><use href="#spark" x="1012" y="940"/><use href="#spark" x="164" y="807"/><use href="#spark" x="887" y="1110"/>
+<!-- Crown and title -->
+<path d="M501 90 L482 50 L529 69 L541 31 L563 69 L604 49 L584 91Z" fill="none" stroke="#ffca20" stroke-width="7" stroke-linejoin="round"/><path d="M499 101 Q541 91 587 101" fill="none" stroke="#ffca20" stroke-width="7"/>
+<text x="540" y="157" text-anchor="middle" font-size="118" font-weight="1000" font-family="Impact,Arial Black,sans-serif" letter-spacing="5" fill="#050505" stroke="#050505" stroke-width="18">KOTA CITY</text>
+<text x="540" y="153" text-anchor="middle" font-size="118" font-weight="1000" font-family="Impact,Arial Black,sans-serif" letter-spacing="5" fill="#ffc71c" stroke="#ffc71c" stroke-width="3">KOTA <tspan fill="#ffffff">CITY</tspan></text>
+<path d="M222 204 L852 192 L830 267 L235 279Z" fill="#dd281d"/><text x="535" y="253" text-anchor="middle" font-size="83" font-family="Impact,Arial Black,sans-serif" font-weight="900" fill="white" transform="rotate(-1 540 225)">CHILLAS</text>
+<rect x="395" y="284" width="292" height="43" rx="18" fill="#ffc520"/><text x="541" y="314" text-anchor="middle" font-size="29" font-family="Arial,sans-serif" font-weight="900" fill="#150900">1ST EDITION</text>
+<text x="539" y="364" text-anchor="middle" font-size="25" font-family="Arial,sans-serif" font-weight="900" fill="#ffffff" letter-spacing="2">GOOD MUSIC  •  GOOD VIBES  •  GOOD FOOD</text>
+<!-- Light rays -->
+<path d="M455 392 L315 845 L596 843 L566 392Z" fill="#ffb600" opacity=".13"/><path d="M566 387 L488 839 L779 849 L626 390Z" fill="#fffaa9" opacity=".08"/>
+<!-- Artist 1 mystery -->
+<path d="M28 695 Q16 590 85 525 Q78 460 127 425 Q179 400 224 440 Q265 477 253 527 Q309 580 310 698 L290 756 L35 756Z" fill="#08090d" stroke="#e1b6a9" stroke-width="6"/>
+<path d="M81 534 Q97 421 173 433 Q244 439 254 533 Q224 579 170 579 Q116 579 81 534" fill="#0b0b10" stroke="#414147" stroke-width="6"/>
+<text x="170" y="540" text-anchor="middle" font-size="135" font-family="Impact,sans-serif" font-weight="900" fill="#ffffff">?</text>
+<path d="M22 677 L305 663 L305 745 L23 752Z" fill="#ffbf19"/><text x="164" y="704" text-anchor="middle" font-size="27" font-family="Arial,sans-serif" font-weight="1000" fill="#1c0808">ARTIST 1</text><text x="164" y="734" text-anchor="middle" font-size="22" font-family="Arial,sans-serif" font-weight="900" fill="#1c0808">TO BE REVEALED</text>
+<!-- Artist 2 mystery -->
+<path d="M775 693 Q767 575 819 528 Q811 465 861 432 Q916 398 957 435 Q1005 479 996 534 Q1064 579 1063 703 L1044 747 L790 752Z" fill="#08090e" stroke="#e1b6a9" stroke-width="6"/>
+<path d="M820 531 Q836 427 909 434 Q984 435 997 532 Q968 576 913 580 Q858 576 820 531" fill="#0a0a10" stroke="#414147" stroke-width="6"/>
+<text x="913" y="542" text-anchor="middle" font-size="135" font-family="Impact,sans-serif" font-weight="900" fill="white">?</text>
+<path d="M772 681 L1064 668 L1060 747 L771 750Z" fill="#ffbf19"/><text x="920" y="705" text-anchor="middle" font-size="27" font-family="Arial,sans-serif" font-weight="900" fill="#1c0808">ARTIST 2</text><text x="920" y="734" text-anchor="middle" font-size="22" font-family="Arial,sans-serif" font-weight="900" fill="#1c0808">TO BE REVEALED</text>
+<!-- DJ center -->
+<ellipse cx="542" cy="645" rx="226" ry="242" fill="#ff8800" opacity=".32" filter="url(#glow)"/>
+<path d="M322 735 Q345 643 415 630 L468 621 L620 626 Q704 658 750 735 L770 882 L307 885Z" fill="#101217" stroke="#3e3433" stroke-width="6"/>
+<path d="M436 650 L475 707 L535 693 L574 710 L638 647" fill="none" stroke="#282727" stroke-width="12"/>
+<ellipse cx="538" cy="532" rx="86" ry="99" fill="url(#skin)" stroke="#462018" stroke-width="5"/>
+<path d="M455 495 Q439 420 502 413 Q552 394 602 435 Q624 466 622 505 Q565 466 533 473 Q482 470 455 495Z" fill="#090a0e"/>
+<path d="M450 507 Q424 544 455 586" fill="none" stroke="#fbbb21" stroke-width="18"/><path d="M629 506 Q656 547 625 582" fill="none" stroke="#ffb822" stroke-width="18"/><path d="M443 525 Q438 447 502 425 M634 525 Q636 447 577 425" fill="none" stroke="#171920" stroke-width="23"/>
+<path d="M468 518 Q497 501 535 519 L534 545 Q501 566 472 541Z M544 520 Q578 503 610 516 L609 541 Q577 558 544 545Z" fill="#080d16" stroke="#b87935" stroke-width="4"/>
+<path d="M532 535 L545 571 L525 576" fill="none" stroke="#71361e" stroke-width="6"/><path d="M501 595 Q544 616 583 594" fill="none" stroke="#371a1c" stroke-width="5"/>
+<path d="M493 618 L493 647 L547 678 L585 648 L586 617" fill="url(#skin)"/>
+<path d="M480 648 L543 701 L603 649" fill="none" stroke="#ba8c3b" stroke-width="6"/>
+<!-- DJ foreground deck and hands -->
+<path d="M332 769 L757 769 L826 898 L264 900Z" fill="#10151c" stroke="#dc8b29" stroke-width="7"/>
+<path d="M359 798 L472 796 L484 870 L348 867Z" fill="#151a25" stroke="#d55421" stroke-width="5"/>
+<ellipse cx="415" cy="835" rx="49" ry="29" fill="#080b12" stroke="#ec412c" stroke-width="7"/><ellipse cx="415" cy="835" rx="31" ry="19" fill="none" stroke="#f5a534" stroke-width="5"/>
+<path d="M594 795 L721 798 L738 874 L584 875Z" fill="#121823" stroke="#e88229" stroke-width="5"/>
+<ellipse cx="654" cy="837" rx="50" ry="28" fill="#060d16" stroke="#278fff" stroke-width="7"/><ellipse cx="654" cy="837" rx="29" ry="18" fill="none" stroke="#e0ac31" stroke-width="5"/>
+<rect x="489" y="790" width="87" height="87" rx="6" fill="#070b13" stroke="#aab1b1" stroke-width="3"/>
+<g fill="#f8af16"><circle cx="504" cy="807" r="5"/><circle cx="528" cy="807" r="5"/><circle cx="551" cy="807" r="5"/><circle cx="504" cy="830" r="5"/><circle cx="528" cy="830" r="5"/><circle cx="551" cy="830" r="5"/></g>
+<g stroke="#e95424" stroke-width="7"><path d="M511 849 v17 M534 843 v22 M558 850 v15"/></g>
+<path d="M410 662 Q384 735 471 800 L512 789 L492 752 Q451 709 463 674Z" fill="#11131a"/><path d="M671 655 Q709 720 632 798 L592 787 L610 754 Q636 704 617 672Z" fill="#12141b"/>
+<path d="M458 768 q20 -12 40 4 l11 19 q-16 22-37 8z M610 771 q-22 -12-37 10 l-5 20 q20 21 40 -1z" fill="url(#skin)" stroke="#633122" stroke-width="3"/>
+<rect x="385" y="905" width="320" height="36" rx="13" fill="#ee251c"/><text x="545" y="932" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="27" font-weight="900" fill="white">DJ ON THE DECKS</text>
+<!-- Food kota illustration -->
+<ellipse cx="390" cy="1041" rx="337" ry="108" fill="#060606" opacity=".8"/>
+<path d="M84 1030 Q335 975 608 1029 L572 1105 Q316 1154 81 1084Z" fill="url(#bread)" stroke="#803509" stroke-width="8"/>
+<path d="M100 1002 Q325 943 602 988 L578 1048 Q350 1071 102 1052Z" fill="#783014" stroke="#e67f1d" stroke-width="10"/>
+<g fill="#c63b1d" stroke="#6b1813" stroke-width="5"><ellipse cx="175" cy="1012" rx="50" ry="31"/><ellipse cx="269" cy="991" rx="53" ry="35"/><ellipse cx="366" cy="982" rx="58" ry="38"/><ellipse cx="462" cy="989" rx="58" ry="37"/></g>
+<path d="M111 966 Q323 913 572 952 L591 995 Q510 993 478 1048 L447 1029 L394 1069 L350 1033 L288 1077 L265 1024 L183 1069 L170 1021 L103 1042Z" fill="#f9b319" stroke="#ffd458" stroke-width="6"/>
+<path d="M79 944 Q327 877 582 925 L614 967 Q336 1015 89 988Z" fill="url(#bread)" stroke="#87390e" stroke-width="10"/>
+<g stroke="#ae5419" stroke-width="5" opacity=".77"><path d="M122 941 Q287 898 501 942 M134 956 Q311 915 555 948 M128 970 Q309 936 572 963"/></g>
+<g fill="#f0ab2d" stroke="#823709" stroke-width="5"><path d="M569 1080 l52 -121 28 11 -34 133z"/><path d="M625 1086 l67 -115 29 15 -61 113z"/><path d="M660 1102 l85 -106 29 19 -79 102z"/><path d="M712 1118 l81 -112 31 20 -71 113z"/></g>
+<g fill="white" opacity=".9"><circle cx="189" cy="943" r="3"/><circle cx="303" cy="923" r="4"/><circle cx="427" cy="928" r="3"/><circle cx="513" cy="946" r="3"/></g>
+<!-- Mocktail -->
+<path d="M858 948 L1010 948 L987 1121 Q951 1142 883 1120Z" fill="url(#drink)" stroke="#f9e8c5" stroke-width="7"/>
+<path d="M862 960 Q929 978 1006 961" fill="none" stroke="#fff4b4" stroke-width="8" opacity=".8"/>
+<path d="M940 968 L971 881" stroke="#ffcc24" stroke-width="9"/><path d="M967 891 L998 884" stroke="#ffcc24" stroke-width="9"/>
+<circle cx="861" cy="947" r="34" fill="#f7b530" stroke="#ffe08a" stroke-width="5"/><circle cx="861" cy="947" r="23" fill="#d37a1c"/><path d="M862 919 v55 M835 946 h53" stroke="#ffdf6e" stroke-width="4"/>
+<g fill="#2b8e41"><path d="M924 939 Q902 910 886 912 Q912 931 924 939 M927 938 Q931 901 955 900 Q951 929 927 938"/></g>
+<!-- Event data panels -->
+<rect x="40" y="1180" width="1000" height="394" rx="31" fill="#06090d" stroke="#ffc01c" stroke-width="7"/>
+<path d="M40 1210 Q530 1167 1040 1208" stroke="#fa3d1a" stroke-width="12" opacity=".9"/>
+<rect x="58" y="1204" width="964" height="112" rx="16" fill="#281113"/>
+<text x="190" y="1264" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="65" font-weight="900" fill="#ffca19">21</text>
+<text x="190" y="1296" text-anchor="middle" font-family="Arial,sans-serif" font-size="28" font-weight="900" fill="white">NOV 2026</text>
+<path d="M300 1219 v80" stroke="#ffc021" stroke-width="5"/>
+<text x="650" y="1256" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="43" font-weight="900" fill="white">DUTHUNI GREENVIEW</text>
+<text x="650" y="1299" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="43" font-weight="900" fill="#ffca19">CAR WASH</text>
+<rect x="60" y="1327" width="958" height="115" rx="14" fill="#a81517"/>
+<text x="205" y="1404" text-anchor="middle" font-family="Impact,Arial Black,sans-serif" font-weight="900" font-size="84" fill="#ffdf22">R100</text>
+<path d="M345 1344 v78" stroke="#ffc31f" stroke-width="5"/>
+<text x="670" y="1368" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="35" fill="white">EARLY BIRD = KOTA</text>
+<text x="670" y="1415" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="39" fill="#fff043">+ FREE MOCKTAIL</text>
+<rect x="88" y="1452" width="904" height="48" rx="10" fill="#f7c41b"/>
+<text x="540" y="1485" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="27" font-weight="1000" fill="#160808">PRE-SOLD ONLY • NO TICKET, NO KOTA!</text>
+<text x="540" y="1533" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="26" font-weight="900" fill="white">LIMITED TO 50 PEOPLE  •  DM TO BUY A TICKET</text>
+<text x="540" y="1562" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" font-weight="900" fill="#ffc320">CAPITEC / E-WALLET   •   FOOD SOLD SEPARATELY   •   HUBBLY AVAILABLE</text>
+<path d="M122 1594 H956" stroke="#db3023" stroke-width="10" stroke-linecap="round"/>
+</svg>
